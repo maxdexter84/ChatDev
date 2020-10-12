@@ -52,6 +52,5 @@ constructor(id: String, firstName: String?, lastName: String?): this(
 
     }
 
-
 }
 

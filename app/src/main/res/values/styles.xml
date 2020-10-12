@@ -1,10 +1,31 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Launcher" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+
+
+    <style name="profile_text_sttyle">
+        <item name="android:fontFamily">@font/roboto_slab</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
+    <style name="nick_name_style">
+        <item name="android:fontFamily">@font/roboto_slab</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
 </resources>

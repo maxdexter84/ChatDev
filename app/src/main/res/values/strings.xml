@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Dev intensive</string>
+    <string name="message">message</string>
+    <string name="EditText_hint">Введите текст</string>
+    <string name="image_header_description">less</string>
+    <string name="user">junior_android_developer</string>
+    <string name="rating">Рейтинг</string>
+    <string name="success">Успех</string>
+    <string name="hint_name">Имя</string>
+    <string name="hint_second_name">Фамилия</string>
 </resources>
