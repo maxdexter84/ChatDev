@@ -29,7 +29,7 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
-       
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
         initViewModel()
         initView(savedInstanceState)
