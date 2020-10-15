@@ -1,6 +1,7 @@
 package ru.skillbranch.devintensive.utils
 
-import java.io.File
+import java.util.*
+
 
 object Utils {
 
@@ -12,7 +13,7 @@ object Utils {
     }
 
     fun transliteration(payload: String, divider: String = " "): String {
-        var name = StringBuilder()
+        val name = StringBuilder()
         for (item in payload){
            val i = replaceLetter(item.toString())
             if(i == null) {
@@ -22,16 +23,48 @@ object Utils {
         return name.toString()
     }
    private fun replaceLetter(key: String): String? {
-        val file = File("src/main/java/ru/skillbranch/alphabet.txt")
-        val list =  file.readLines()
-        val map = mutableMapOf<String,String>()
-        for (item in list) {
-            val(key, value) = item.split(':')
-            val(keyUp, valueUp) = item.split(':')
-            map.put(key, value)
-            map.put(keyUp.toUpperCase(), valueUp.toUpperCase())
+        val map = mutableMapOf<String,String>(
+            "а" to "a",
+            "б" to "b",
+            "в" to "v",
+            "г" to "g",
+            "д" to "d",
+            "е" to "e",
+            "ё" to "e",
+            "ж" to "zh",
+            "з" to "z",
+            "и" to "i",
+            "й" to "i",
+            "к" to "k",
+            "л" to "l",
+            "м" to "m",
+            "н" to "n",
+            "о" to "o",
+            "п" to "p",
+            "р" to "r",
+            "с" to "s",
+            "т" to "t",
+            "у" to "u",
+            "ф" to "f",
+            "х" to "h",
+            "ц" to "c",
+            "ч" to "ch",
+            "ш" to "sh",
+            "щ" to "sh",
+            "ъ" to "",
+            "ы" to "i",
+                "ь" to "",
+       "э" to "e to ",
+       "ю" to "yu",
+       "я" to "ya")
+       val bigLetter = mutableMapOf<String, String>()
+        for (item in map) {
+            val(key, value) = item
+            bigLetter[key.toUpperCase(Locale.ROOT)] = value.toUpperCase(Locale.ROOT)
+
         }
-        return map[key]
+
+        return map[key] ?: bigLetter[key]
     }
     fun toInitials(firstName: String?, lastName: String?): String? {
         val a = firstLetterToUpperCase(firstName)
