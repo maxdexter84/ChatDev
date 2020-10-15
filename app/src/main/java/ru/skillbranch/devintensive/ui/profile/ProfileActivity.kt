@@ -29,7 +29,7 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
-        setTheme(R.style.AppTheme)
+       
         binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
         initViewModel()
         initView(savedInstanceState)
@@ -88,9 +88,9 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun showCurrentMode(editMode: Boolean) {
         binding.wrRepository.isFocusable = editMode
-        //binding.itRepositoryLinc.isEnabled = editMode
+        binding.etRepository.isEnabled = editMode
         binding.wrAbout.isFocusable = editMode
-       // binding.tiAboutMe.isEnabled = editMode
+        binding.etAbout.isEnabled = editMode
         binding.tiFirstName.isFocusable = editMode
         binding.tiFirstName.isEnabled = editMode
         binding.tiLastName.isFocusable = editMode

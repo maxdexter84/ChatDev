@@ -1,12 +1,4 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorPrimaryDark">@color/color_primary_dark</item>
-        <item name="colorAccent">@color/color_accent</item>
-    </style>
-
 
     <!-- Base application theme. -->
     <style name="AppTheme.Launcher" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -26,6 +18,19 @@
         <item name="android:fontFamily">@font/roboto_slab</item>
         <item name="android:textSize">@dimen/medium_text_size</item>
         <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Profile.EditText" parent="Profile">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:enabled">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="Profile"></style>
+
+    <style name="Profile.View">
+        <item name="android:background">?attr/colorDivider</item>
     </style>
 
 </resources>
